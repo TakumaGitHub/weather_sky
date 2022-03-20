@@ -2,4 +2,10 @@
     <string name="app_name">Weather Sky</string>
     <!--    スプラッシュ画面-->
     <string name="splash_title">Weather SKY</string>
+    <!--    ツールバーテキスト-->
+    <string name="tool_bar_title">Weather SKY</string>
+    <!--    ボトムナビゲーション-->
+    <string name="top_text">TOP</string>
+    <string name="bookmark_text">BOOKMARK</string>
+    <string name="note_text">NOTE</string>
 </resources>

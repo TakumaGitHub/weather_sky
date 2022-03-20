@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="500dp"
-        android:fontFamily="@font/ramaraja"
+        android:fontFamily="@font/buenard"
         android:letterSpacing="0.1"
         android:text="@string/splash_title"
         android:textColor="@color/white"

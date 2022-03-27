@@ -8,4 +8,11 @@
     <string name="top_text">TOP</string>
     <string name="bookmark_text">BOOKMARK</string>
     <string name="note_text">NOTE</string>
+
+    <!--    通信エラー-->
+    <string name="communication_error_dialog_title">Communication Error</string>
+    <string name="communication_error_dialog_message">Please communicate in a place with good environment.</string>
+    <string name="communication_error_dialog_positive_button">OK</string>
+    <!--    通信エラー-->
+    <string name="no_results_text">No results to display.</string>
 </resources>

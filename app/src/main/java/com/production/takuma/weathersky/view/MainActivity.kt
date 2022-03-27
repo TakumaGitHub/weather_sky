@@ -6,10 +6,12 @@ import androidx.navigation.Navigation
 import androidx.navigation.ui.setupWithNavController
 import com.production.takuma.weathersky.R
 import com.production.takuma.weathersky.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
-    /** ViewBinding用のbindingクラス **/
+    /** ViewBinding用のbindingクラス */
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

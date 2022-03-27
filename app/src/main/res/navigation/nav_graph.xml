@@ -11,6 +11,9 @@
         android:label="fragment_top"
         tools:layout="@layout/fragment_top" >
         <action
+            android:id="@+id/action_top_item_to_connectionErrorDialogFragment"
+            app:destination="@id/connection_error_dialog_fragment" />
+        <action
             android:id="@+id/action_topFragment_to_weatherDetailFragment"
             app:destination="@id/weather_deetail_item" />
     </fragment>
@@ -21,7 +24,11 @@
         tools:layout="@layout/fragment_weather_detail" >
         <action
             android:id="@+id/action_weatherDetailFragment_to_topFragment"
-            app:destination="@id/top_item" />
+            app:destination="@id/top_item"
+            app:popUpTo="@id/top_item" />
+        <argument
+            android:name="location_id"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/bookmark_item"
@@ -41,4 +48,8 @@
             android:id="@+id/action_noteFragment_to_weatherDetailFragment"
             app:destination="@id/weather_deetail_item" />
     </fragment>
+    <dialog
+        android:id="@+id/connection_error_dialog_fragment"
+        android:name="com.production.takuma.weathersky.utils.ConnectionErrorDialogFragment"
+        android:label="ConnectionErrorDialogFragment" />
 </navigation>

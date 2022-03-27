@@ -8,4 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="silver">#c0c0c0</color>
+    <color name="transparent">#00000000</color>
+    <color name="search_view_background">#E9E9E9</color>
+    <color name="weather_condition">#1B1B1B</color>
+    <color name="country_name">#787878</color>
+    <color name="city_name">#787878</color>
+    <color name="no_result">#787878</color>
 </resources>

@@ -87,30 +87,30 @@ class WeatherRepository @Inject constructor(
     fun findAllWeathersFromSearch(searchWord: String) = weatherDao.findAllFromSearch(searchWord)
 
     /**
-     * データベースから、天気ロケーションIDをもとに天気情報を取得
+     * データベースから、対象地域をもとに天気情報を取得
      *
-     * @param id 天気ロケーションID
+     * @param targetArea 対象地域
      * @return [Weather] 天気情報
      */
-    fun findWeatherFromId(id: String) = weatherDao.findWeatherFromId(id)
+    fun findWeatherFromTargetArea(targetArea: String) = weatherDao.findWeatherFromTargetArea(targetArea)
 
     /**
      * 「メモ」の情報を更新
      *
-     * @param id 天気ロケーションID
+     * @param targetArea 対象地域
      * @param note ノート
      */
-    fun updateNoteInfo(id: String, note: String) =
-        weatherDao.updateNoteInfo(id, note)
+    fun updateNoteInfo(targetArea: String, note: String) =
+        weatherDao.updateNoteInfo(targetArea, note)
 
     /**
      * 「ブックマーク」の情報を更新
      *
-     * @param id 天気ロケーションID
+     * @param targetArea 対象地域
      * @param isBookmark ブックマーク
      */
-    fun updateBookmarkStateFromId(id: String, isBookmark: Boolean) =
-        weatherDao.updateBookmarkStateFromId(id, isBookmark)
+    fun updateBookmarkStateFromTargetArea(targetArea: String, isBookmark: Boolean) =
+        weatherDao.updateBookmarkStateFromTargetArea(targetArea, isBookmark)
 
     /**
      * ノートのある天気一覧を取得
@@ -118,25 +118,25 @@ class WeatherRepository @Inject constructor(
     fun getNoteWeatherList() = weatherDao.findNoteExistenceList()
 
     /**
-     * 指定した天気ロケーションIDのブックマーク状態を、DB上で登録する
+     * 指定した対象地域のブックマーク状態を、DB上で登録する
      *
-     * @param bookmarkList ブックマーク登録対象の天気ロケーションIDリスト
+     * @param bookmarkList ブックマーク登録対象の対象地域リスト
      */
     fun updateBookmarkStateFromList(bookmarkList: List<String>) =
         weatherDao.updateBookmarkStateFromList(bookmarkList)
 
     /**
-     * 指定した天気ロケーションIDのブックマーク状態を、DB上で解除する
+     * 指定した対象地域のブックマーク状態を、DB上で解除する
      *
-     * @param nonBookmarkList ブックマーク解除対象の天気ロケーションIDリスト
+     * @param nonBookmarkList ブックマーク解除対象の対象地域リスト
      */
     fun updateNonBookmarkStateFromList(nonBookmarkList: List<String>) =
         weatherDao.updateNonBookmarkStateFromList(nonBookmarkList)
 
     /**
-     * ブックマークした都市の天気を一覧で取得
+     * ブックマークした対象地域の天気を一覧で取得
      *
-     * @return ブックマークした都市の天気一覧
+     * @return ブックマークした対象地域の天気一覧
      */
     fun getBookmarkWeatherList(): List<Weather> = weatherDao.findBookmarkList()
 }

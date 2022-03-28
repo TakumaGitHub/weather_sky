@@ -30,7 +30,7 @@ interface WeatherDao {
 
     /** 対象地域から天気情報を取得 */
     @Query("SELECT * FROM weather_table WHERE target_area == :targetArea")
-    fun findWeatherFromId(targetArea: String): Weather
+    fun findWeatherFromTargetArea(targetArea: String): Weather
 
     /** 「メモ」の情報を更新 */
     @Query("UPDATE weather_table SET note = :note WHERE target_area = :targetArea")
@@ -38,7 +38,7 @@ interface WeatherDao {
 
     /** 「ブックマーク」の情報を更新 */
     @Query("UPDATE weather_table SET is_bookmark = :isBookmark WHERE target_area = :targetArea")
-    fun updateBookmarkStateFromId(targetArea: String, isBookmark: Boolean)
+    fun updateBookmarkStateFromTargetArea(targetArea: String, isBookmark: Boolean)
 
     /** ノートのある天気リストを取得 */
     @Query("SELECT * FROM weather_table WHERE note IS NOT NULL AND note != ''")

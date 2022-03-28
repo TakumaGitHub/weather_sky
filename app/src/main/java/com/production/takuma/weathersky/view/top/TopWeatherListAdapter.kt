@@ -63,12 +63,12 @@ class TopWeatherListAdapter :
         fun bind(weather: Weather) {
             binding.apply {
                 // 対象地域から該当画像を取得し、レイアウトに挿入
-                val image = WeatherImage.getIconImageFromId(weather.targetArea)
+                val image = WeatherImage.getIconImageFromTargetArea(weather.targetArea)
                 weatherImage.setImageResource(image)
                 // 取得した各テキストをレイアウトに挿入
-                weatherConditionText.text = weather.targetArea
-                countryNameText.text = weather.publishingOffice
-                cityNameText.text = weather.reportDatetime
+                targetAreaText.text = weather.targetArea
+                publishingOfficeText.text = weather.publishingOffice
+                reportDatetimeText.text = weather.reportDatetime
 
                 // 「お気に入り済」「メモ済」を判断し、Visibility制御
                 if (weather.isBookmark == null || weather.isBookmark == false)

@@ -41,7 +41,7 @@ enum class WeatherImage(val targetArea: String, val iconImage: Int, val detailIm
          * @param targetArea 対象地域
          * @return 天気一覧に表示する画像リソースID
          */
-        fun getIconImageFromId(targetArea: String): Int {
+        fun getIconImageFromTargetArea(targetArea: String): Int {
             return values().first { it.targetArea == targetArea }.iconImage
         }
 
@@ -51,7 +51,7 @@ enum class WeatherImage(val targetArea: String, val iconImage: Int, val detailIm
          * @param targetArea 対象地域
          * @return 詳細画面に表示する画像リソースID
          */
-        fun getDetailImageFromId(targetArea: String): Int {
+        fun getDetailImageFromTargetArea(targetArea: String): Int {
             return values().first { it.targetArea == targetArea }.detailImage
         }
     }

@@ -81,7 +81,7 @@ class ApplicationProvidesModule {
         Room.databaseBuilder(context, WeatherDatabase::class.java, "weather_db").build()
 
     /**
-     * [weatherDao]の提供
+     * [WeatherDao]の提供
      * @param db [WeatherDatabase]
      * @return [WeatherDao]のインスタンス
      */

@@ -27,7 +27,7 @@
             app:destination="@id/top_item"
             app:popUpTo="@id/top_item" />
         <argument
-            android:name="location_id"
+            android:name="target_area"
             app:argType="string" />
     </fragment>
     <fragment

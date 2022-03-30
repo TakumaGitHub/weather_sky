@@ -22,7 +22,7 @@ class WeatherDetailViewModel @Inject constructor(
     /** ブックマーク状態 */
     private var isBookmark = false
 
-    /** メモ */
+    /** ノート */
     private var note = ""
 
     /**
@@ -37,7 +37,7 @@ class WeatherDetailViewModel @Inject constructor(
             }
             // ブックマーク状態を設定
             result.isBookmark?.let { setBookmarkState(it) }
-            // メモを設定
+            // ノートを設定
             result.note?.let { setNote(it) }
             // フィールド変数の天気詳細に、取得した情報をセット
             weather.value = result
@@ -64,7 +64,7 @@ class WeatherDetailViewModel @Inject constructor(
     fun saveBookmarkState() {
         viewModelScope.launch {
             withContext(Dispatchers.IO) {
-                // 対象地域がnullでなければ、該当天気情報のお気に入りを更新
+                // 対象地域がnullでなければ、該当天気情報のブックマークを更新
                 weather.value?.targetArea?.let { targetArea ->
                     repository.updateBookmarkStateFromTargetArea(targetArea, getBookmarkState())
                 }

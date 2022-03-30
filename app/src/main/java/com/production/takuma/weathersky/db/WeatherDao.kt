@@ -32,7 +32,7 @@ interface WeatherDao {
     @Query("SELECT * FROM weather_table WHERE target_area == :targetArea")
     fun findWeatherFromTargetArea(targetArea: String): Weather
 
-    /** 「メモ」の情報を更新 */
+    /** 「ノート」の情報を更新 */
     @Query("UPDATE weather_table SET note = :note WHERE target_area = :targetArea")
     fun updateNoteInfo(targetArea: String, note: String)
 

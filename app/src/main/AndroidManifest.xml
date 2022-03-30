@@ -4,10 +4,9 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <!-- TODO: android:allowBackup="true" に戻す-->
     <application
         android:name=".WeatherSkyApplication"
-        android:allowBackup="false"
+        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -23,7 +22,9 @@
         </activity>
         <activity
             android:name=".view.MainActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait"/>
 
         <meta-data
             android:name="preloaded_fonts"

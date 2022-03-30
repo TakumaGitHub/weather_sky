@@ -56,7 +56,7 @@ class WeatherDetailFragment : Fragment(), SingleClick {
                 descriptionText.text = weather.text
                 publishingOfficeText.text = weather.publishingOffice
                 reportDatetimeText.text = weather.reportDatetime
-                // メモをセット
+                // ノートをセット
                 if (viewModel.getNote().isNotEmpty()) noteText.setText(viewModel.getNote())
 
                 // ローディングを非表示
@@ -70,7 +70,7 @@ class WeatherDetailFragment : Fragment(), SingleClick {
         // TopFragmentから受け取った値がnullでなければ、天気詳細を取得する
         arguments?.getString("target_area")?.let { viewModel.getWeather(it) }
 
-        // お気に入りボタンを押すと活性化 or 非活性化
+        // ブックマークボタンを押すと活性化 or 非活性化
         binding.bookmarkButton.setOnClickListener {
             when (viewModel.getBookmarkState()) {
                 true -> {

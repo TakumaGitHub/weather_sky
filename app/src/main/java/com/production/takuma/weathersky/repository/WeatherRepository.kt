@@ -95,7 +95,7 @@ class WeatherRepository @Inject constructor(
     fun findWeatherFromTargetArea(targetArea: String) = weatherDao.findWeatherFromTargetArea(targetArea)
 
     /**
-     * 「メモ」の情報を更新
+     * 「ノート」の情報を更新
      *
      * @param targetArea 対象地域
      * @param note ノート

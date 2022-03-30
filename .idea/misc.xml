@@ -15,8 +15,9 @@
         <entry key="app/src/main/res/font/ramaraja.xml" value="0.2015625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/bookmark_note_list_item.xml" value="0.165" />
         <entry key="app/src/main/res/layout/fragment_bookmark.xml" value="0.11145833333333334" />
-        <entry key="app/src/main/res/layout/fragment_note.xml" value="0.11145833333333334" />
+        <entry key="app/src/main/res/layout/fragment_note.xml" value="0.45" />
         <entry key="app/src/main/res/layout/fragment_top.xml" value="0.21920289855072464" />
         <entry key="app/src/main/res/layout/fragment_weather_detail.xml" value="0.165" />
         <entry key="app/src/main/res/layout/weather_list_item.xml" value="0.17135416666666667" />

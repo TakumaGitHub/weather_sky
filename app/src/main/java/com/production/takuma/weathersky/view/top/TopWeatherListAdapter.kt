@@ -70,7 +70,7 @@ class TopWeatherListAdapter :
                 publishingOfficeText.text = weather.publishingOffice
                 reportDatetimeText.text = weather.reportDatetime
 
-                // 「お気に入り済」「メモ済」を判断し、Visibility制御
+                // 「ブックマーク済」「ノート済」を判断し、Visibility制御
                 if (weather.isBookmark == null || weather.isBookmark == false)
                     bookmarkIconImage.visibility = View.GONE
                 if (weather.note.isNullOrEmpty()) noteIconImage.visibility = View.GONE

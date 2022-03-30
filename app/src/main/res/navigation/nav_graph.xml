@@ -15,10 +15,10 @@
             app:destination="@id/connection_error_dialog_fragment" />
         <action
             android:id="@+id/action_topFragment_to_weatherDetailFragment"
-            app:destination="@id/weather_deetail_item" />
+            app:destination="@id/weather_detail_item" />
     </fragment>
     <fragment
-        android:id="@+id/weather_deetail_item"
+        android:id="@+id/weather_detail_item"
         android:name="com.production.takuma.weathersky.view.weatherDetail.WeatherDetailFragment"
         android:label="fragment_weather_detail"
         tools:layout="@layout/fragment_weather_detail" >
@@ -37,7 +37,7 @@
         tools:layout="@layout/fragment_bookmark" >
         <action
             android:id="@+id/action_bookmarkFragment_to_weatherDetailFragment"
-            app:destination="@id/weather_deetail_item" />
+            app:destination="@id/weather_detail_item" />
     </fragment>
     <fragment
         android:id="@+id/note_item"
@@ -46,7 +46,7 @@
         tools:layout="@layout/fragment_note" >
         <action
             android:id="@+id/action_noteFragment_to_weatherDetailFragment"
-            app:destination="@id/weather_deetail_item" />
+            app:destination="@id/weather_detail_item" />
     </fragment>
     <dialog
         android:id="@+id/connection_error_dialog_fragment"

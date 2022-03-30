@@ -19,7 +19,7 @@ data class Weather(
 
     // ブックマーク
     @ColumnInfo(name = "is_bookmark") var isBookmark: Boolean? = null,
-    // メモ
+    // ノート
     val note: String? = null
 ) {
     @PrimaryKey(autoGenerate = true)

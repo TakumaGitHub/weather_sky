@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    TOP-->
+    <dimen name="top_target_area_text_size">17sp</dimen>
+    <dimen name="top_publishing_office_text_size">10sp</dimen>
+    <dimen name="top_report_datetime_text_size">10sp</dimen>
+
+    <!--    詳細-->
+    <dimen name="detail_target_area_text_size">24sp</dimen>
+    <dimen name="detail_description_text_size">14sp</dimen>
+    <dimen name="detail_publishing_office_title_size">18sp</dimen>
+    <dimen name="detail_report_datetime_title_size">18sp</dimen>
+    <dimen name="detail_date_and_note_title_size">18sp</dimen>
+    <dimen name="detail_date_and_note_text_size">14sp</dimen>
+    <dimen name="detail_note_text_text_size">14sp</dimen>
+    <dimen name="detail_save_button_text_size">20sp</dimen>
+
+    <!--    ブックマーク一覧-->
+    <!--    ノート一覧-->
+    <dimen name="bookmark_note_target_area_text_size">14sp</dimen>
+    <dimen name="bookmark_note_publishing_office_text_size">10sp</dimen>
+    <dimen name="bookmark_note_report_datetime_text_size">10sp</dimen>
+
+    <!--    通信エラー-->
+    <dimen name="no_results_text_size">24sp</dimen>
+</resources>

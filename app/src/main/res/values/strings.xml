@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">Weather Sky</string>
+
+    <!--    スプラッシュ画面-->
+    <string name="splash_title">Weather SKY</string>
+
+    <!--    ツールバーテキスト-->
+    <string name="tool_bar_title">Weather SKY</string>
+
+    <!--    ボトムナビゲーション-->
+    <string name="top_text">TOP</string>
+    <string name="bookmark_text">BOOKMARK</string>
+    <string name="note_text">NOTE</string>
+
+    <!--    詳細画面-->
+    <string name="detail_publishing_office_title">発表機関</string>
+    <string name="detail_report_datetime_title">報告日時</string>
+    <string name="detail_date_title">Date</string>
+    <string name="detail_note_title">Note</string>
+    <string name="detail_note_hint_text">e.g.\n-Schedule</string>
+    <string name="detail_save_button_text">save</string>
+
+    <!--    通信エラー-->
+    <string name="communication_error_dialog_title">Communication Error</string>
+    <string name="communication_error_dialog_message">Please communicate in a place with good environment.</string>
+    <string name="communication_error_dialog_positive_button">OK</string>
+    <string name="no_results_text">No results to display.</string>
 </resources>

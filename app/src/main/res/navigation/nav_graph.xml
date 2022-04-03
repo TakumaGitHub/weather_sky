@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/top_item">
+
+    <fragment
+        android:id="@+id/top_item"
+        android:name="com.production.takuma.weathersky.view.top.TopFragment"
+        android:label="fragment_top"
+        tools:layout="@layout/fragment_top" >
+        <action
+            android:id="@+id/action_top_item_to_connectionErrorDialogFragment"
+            app:destination="@id/connection_error_dialog_fragment" />
+        <action
+            android:id="@+id/action_topFragment_to_weatherDetailFragment"
+            app:destination="@id/weather_detail_item" />
+    </fragment>
+    <fragment
+        android:id="@+id/weather_detail_item"
+        android:name="com.production.takuma.weathersky.view.weatherDetail.WeatherDetailFragment"
+        android:label="fragment_weather_detail"
+        tools:layout="@layout/fragment_weather_detail" >
+        <action
+            android:id="@+id/action_weatherDetailFragment_to_topFragment"
+            app:destination="@id/top_item"
+            app:popUpTo="@id/top_item" />
+        <argument
+            android:name="target_area"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookmark_item"
+        android:name="com.production.takuma.weathersky.view.bookmark.BookmarkFragment"
+        android:label="fragment_bookmark"
+        tools:layout="@layout/fragment_bookmark" >
+        <action
+            android:id="@+id/action_bookmarkFragment_to_weatherDetailFragment"
+            app:destination="@id/weather_detail_item" />
+    </fragment>
+    <fragment
+        android:id="@+id/note_item"
+        android:name="com.production.takuma.weathersky.view.note.NoteFragment"
+        android:label="fragment_note"
+        tools:layout="@layout/fragment_note" >
+        <action
+            android:id="@+id/action_noteFragment_to_weatherDetailFragment"
+            app:destination="@id/weather_detail_item" />
+    </fragment>
+    <dialog
+        android:id="@+id/connection_error_dialog_fragment"
+        android:name="com.production.takuma.weathersky.utils.ConnectionErrorDialogFragment"
+        android:label="ConnectionErrorDialogFragment" />
+</navigation>

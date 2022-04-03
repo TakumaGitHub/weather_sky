@@ -66,7 +66,6 @@ class TopWeatherListAdapter :
                 val image = WeatherImage.getIconImageFromTargetArea(weather.targetArea)
                 weatherImage.setImageResource(image)
                 // 取得した各テキストをレイアウトに挿入
-                targetAreaText.text = weather.targetArea
                 publishingOfficeText.text = weather.publishingOffice
                 reportDatetimeText.text = weather.reportDatetime
 

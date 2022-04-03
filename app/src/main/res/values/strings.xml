@@ -13,8 +13,8 @@
     <string name="note_text">NOTE</string>
 
     <!--    詳細画面-->
-    <string name="detail_publishing_office_title">Publishing Office</string>
-    <string name="detail_report_datetime_title">Report Datetime</string>
+    <string name="detail_publishing_office_title">発表機関</string>
+    <string name="detail_report_datetime_title">報告日時</string>
     <string name="detail_date_title">Date</string>
     <string name="detail_note_title">Note</string>
     <string name="detail_note_hint_text">e.g.\n-Schedule</string>

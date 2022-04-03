@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "weather_table")
 data class Weather(
-    // 発表者
+    // 発表機関
     @ColumnInfo(name = "publishing_office") val publishingOffice: String,
     // 報告日時
     @ColumnInfo(name = "report_datetime") val reportDatetime: String,

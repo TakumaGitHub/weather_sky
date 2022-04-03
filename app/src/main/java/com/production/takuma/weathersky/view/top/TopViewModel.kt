@@ -44,6 +44,7 @@ class TopViewModel @Inject constructor(
         isLoading.value = true
         accessWeatherJob = viewModelScope.launch {
             withContext(Dispatchers.IO) {
+                // TODO: 前回API通信日時と日付が異なる場合に通信する条件を追加
                 // データベースに天気一覧がない場合のみAPI通信し、一覧取得する
                 repository.findAllWeathers().apply {
                     if (isNullOrEmpty()) {

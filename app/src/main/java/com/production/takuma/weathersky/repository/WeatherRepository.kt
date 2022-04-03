@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import com.production.takuma.weathersky.api.WeatherApiService
 import com.production.takuma.weathersky.data.Weather
 import com.production.takuma.weathersky.db.WeatherDao
+import retrofit2.Response
 import javax.inject.Inject
 
 class WeatherRepository @Inject constructor(
@@ -31,8 +32,192 @@ class WeatherRepository @Inject constructor(
                 } ?: setConnectionError()
             }
             .onFailure { setConnectionError() }
+        // 青森県
+        runCatching { weatherApiService.getWeatherAomori() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 岩手県
+        runCatching { weatherApiService.getWeatherIwate() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 宮城県
+        runCatching { weatherApiService.getWeatherMiyagi() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 秋田県
+        runCatching { weatherApiService.getWeatherAkita() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 山形県
+        runCatching { weatherApiService.getWeatherYamagata() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 福島県
+        runCatching { weatherApiService.getWeatherFukushima() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 茨城県
+        runCatching { weatherApiService.getWeatherIbaraki() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 栃木県
+        runCatching { weatherApiService.getWeatherTochigi() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 群馬県
+        runCatching { weatherApiService.getWeatherGunma() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 埼玉県
+        runCatching { weatherApiService.getWeatherSaitama() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 千葉県
+        runCatching { weatherApiService.getWeatherChiba() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
         // 東京都
         runCatching { weatherApiService.getWeatherTokyo() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 神奈川県
+        runCatching { weatherApiService.getWeatherKanagawa() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 新潟県
+        runCatching { weatherApiService.getWeatherNiigata() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 富山県
+        runCatching { weatherApiService.getWeatherToyama() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 石川県
+        runCatching { weatherApiService.getWeatherIshikawa() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 福井県
+        runCatching { weatherApiService.getWeatherFukui() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 山梨県
+        runCatching { weatherApiService.getWeatherYamanashi() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 長野県
+        runCatching { weatherApiService.getWeatherNagano() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 岐阜県
+        runCatching { weatherApiService.getWeatherGifu() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 静岡県
+        runCatching { weatherApiService.getWeatherShizuoka() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 愛知県
+        runCatching { weatherApiService.getWeatherAichi() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 三重県
+        runCatching { weatherApiService.getWeatherMie() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 滋賀県
+        runCatching { weatherApiService.getWeatherShiga() }
             .onSuccess { response ->
                 response.body()?.let { weather ->
                     weatherDao.insert(weather)
@@ -55,8 +240,160 @@ class WeatherRepository @Inject constructor(
                 } ?: setConnectionError()
             }
             .onFailure { setConnectionError() }
+        // 兵庫県
+        runCatching { weatherApiService.getWeatherHyogo() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 奈良県
+        runCatching { weatherApiService.getWeatherNara() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 和歌山県
+        runCatching { weatherApiService.getWeatherWakayama() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 鳥取県
+        runCatching { weatherApiService.getWeatherTottori() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 島根県
+        runCatching { weatherApiService.getWeatherShimane() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 岡山県
+        runCatching { weatherApiService.getWeatherOkayama() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 広島県
+        runCatching { weatherApiService.getWeatherHiroshima() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 山口県
+        runCatching { weatherApiService.getWeatherYamaguchi() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 徳島県
+        runCatching { weatherApiService.getWeatherTokushima() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 香川県
+        runCatching { weatherApiService.getWeatherKagawa() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 愛媛県
+        runCatching { weatherApiService.getWeatherEhime() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 高知県
+        runCatching { weatherApiService.getWeatherKochi() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
         // 福岡県
         runCatching { weatherApiService.getWeatherFukuoka() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 佐賀県
+        runCatching { weatherApiService.getWeatherSaga() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 長崎県
+        runCatching { weatherApiService.getWeatherNagasaki() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 熊本県
+        runCatching { weatherApiService.getWeatherKumamoto() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 大分県
+        runCatching { weatherApiService.getWeatherOita() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 宮崎県
+        runCatching { weatherApiService.getWeatherMiyazaki() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 鹿児島県
+        runCatching { weatherApiService.getWeatherKagoshima() }
+            .onSuccess { response ->
+                response.body()?.let { weather ->
+                    weatherDao.insert(weather)
+                } ?: setConnectionError()
+            }
+            .onFailure { setConnectionError() }
+        // 沖縄
+        runCatching { weatherApiService.getWeatherOkinawa() }
             .onSuccess { response ->
                 response.body()?.let { weather ->
                     weatherDao.insert(weather)
@@ -69,7 +406,9 @@ class WeatherRepository @Inject constructor(
      * 通信エラーが発生した場合に、[connectionError]にtrueをセットする
      */
     private fun setConnectionError() {
-        connectionError.postValue(true)
+        if (connectionError.value == false) {
+            connectionError.postValue(true)
+        }
     }
 
     /**

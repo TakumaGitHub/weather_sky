@@ -2,6 +2,7 @@ package com.production.takuma.weathersky.view.top
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -17,6 +18,7 @@ import com.production.takuma.weathersky.R
 import com.production.takuma.weathersky.data.Weather
 import com.production.takuma.weathersky.databinding.FragmentTopBinding
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.delay
 
 @AndroidEntryPoint
 class TopFragment : Fragment() {
@@ -46,7 +48,7 @@ class TopFragment : Fragment() {
         binding.recyclerView.apply {
             setHasFixedSize(true)
             adapter = weatherListAdapter
-            layoutManager = GridLayoutManager(requireContext(), 3, RecyclerView.VERTICAL, false)
+            layoutManager = GridLayoutManager(requireContext(), 4, RecyclerView.VERTICAL, false)
         }
         // RecyclerViewのクリックリスナー設定
         weatherListAdapter.setOnItemClickListener(object : TopWeatherListAdapter.OnItemClickListener {
